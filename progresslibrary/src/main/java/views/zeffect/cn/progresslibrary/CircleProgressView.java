@@ -92,6 +92,7 @@ public class CircleProgressView extends View {
         mPaint = new Paint();
         mPaint.setColor(bgColor);
         mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setAntiAlias(true);
     }
 
 //     算了，不测量宽高
