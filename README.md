@@ -40,7 +40,7 @@
  Step 2. Add the dependency
 
  	dependencies {
- 	        compile 'com.github.xuanu:ProgressView:1.0'
+ 	        compile 'com.github.xuanu:ProgressView:1.2'
  	}
 
 
