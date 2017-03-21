@@ -80,7 +80,7 @@ public class CircleProgressView extends View {
         mArcMarign = (int) tempArray.getDimension(R.styleable.CircleProgressView_arcMargin, dp2px(getContext(), 2));
         mTotal = tempArray.getInteger(R.styleable.CircleProgressView_total, mTotal);
         mProgress = tempArray.getInteger(R.styleable.CircleProgressView_progress, mProgress);
-        mStartAngle = tempArray.getFloat(R.styleable.CircleProgressView_startAngle, -mStartAngle);
+        mStartAngle = tempArray.getFloat(R.styleable.CircleProgressView_startAngle, mStartAngle);
         bgColor = tempArray.getColor(R.styleable.CircleProgressView_bgColor, bgColor);
         progressColor = tempArray.getColor(R.styleable.CircleProgressView_progressColor, progressColor);
         isClockwise = tempArray.getBoolean(R.styleable.CircleProgressView_isClockWise, isClockwise);
