@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressView">
+        <attr name="bgColor" format="color"></attr>
+        <attr name="progressColor" format="color"></attr>
+        <attr name="isClockWise" format="boolean"></attr>
+        <attr name="startAngle" format="float"></attr>
+        <attr name="arcMargin" format="dimension"></attr>
+        <attr name="total" format="integer"></attr>
+        <attr name="progress" format="integer"></attr>
+    </declare-styleable>
+</resources>

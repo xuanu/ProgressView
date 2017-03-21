@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <views.zeffect.cn.progresslibrary.CircleProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        />
+
+    <views.zeffect.cn.progresslibrary.CircleProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:arcMargin="0dp"
+        />
+
+    <views.zeffect.cn.progresslibrary.CircleProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:progress="8"
+        app:startAngle="0"
+        />
+
+    <views.zeffect.cn.progresslibrary.CircleProgressView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:isClockWise="true"
+        app:progress="8"
+        app:startAngle="0"
+        />
+</LinearLayout>
