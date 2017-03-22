@@ -66,8 +66,7 @@ public class CircleProgressView extends View {
     private boolean isClockwise = false;
 
     public CircleProgressView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public CircleProgressView(Context context, AttributeSet attrs) {
@@ -126,7 +125,7 @@ public class CircleProgressView extends View {
         pCanvas.drawCircle(circleX, cicleY, raduis, mPaint);
         mRectF = new RectF(circleX - raduis + mArcMarign, cicleY - raduis + mArcMarign, circleX + raduis - mArcMarign, cicleY + raduis - mArcMarign);
         mPaint.setColor(progressColor);
-        pCanvas.drawArc(mRectF, mStartAngle, isClockwise ? (360 * mProgress / mTotal) : -(360 * mProgress / mTotal), true, mPaint);
+        pCanvas.drawArc(mRectF, mStartAngle, (isClockwise ? 1 : -1) * (360 * mProgress / mTotal), true, mPaint);
     }
 
 
