@@ -144,24 +144,52 @@ public class CircleProgressView extends View {
     }
 
     public CircleProgressView setTotal(int pTotal) {
+        if (pTotal < 1) {
+            pTotal = 1;
+        }
+        if (pTotal < mProgress) {
+            pTotal = mProgress;
+        }
         mTotal = pTotal;
         invalidate();
         return this;
     }
 
     public CircleProgressView setProgress(int pProgress) {
+        if (pProgress < 1) {
+            pProgress = 1;
+        }
+        if (pProgress > mTotal) {
+            mTotal = pProgress;
+        }
         mProgress = pProgress;
         invalidate();
         return this;
     }
 
     public CircleProgressView setStartAngle(float pStartAngle) {
+        if (Math.abs(pStartAngle) % 45 != 0) {
+            pStartAngle = mStartAngle;
+        }
         mStartAngle = pStartAngle;
         invalidate();
         return this;
     }
 
     public CircleProgressView setArcMarign(int pArcMarign) {
+        if (pArcMarign < 0) {
+            pArcMarign = 0;
+        }
+        int height = getHeight();
+        int width = getWidth();
+        //取中心位置
+        float circleX = width * 1f / 2;
+        float cicleY = height * 1f / 2;
+        //取半径
+        float raduis = (height > width ? cicleY : circleX) - dp2px(getContext(), 1);
+        if (pArcMarign >= raduis) {
+            pArcMarign = mArcMarign;
+        }
         mArcMarign = pArcMarign;
         invalidate();
         return this;
